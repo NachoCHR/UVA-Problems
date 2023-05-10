@@ -14,8 +14,6 @@ int main(){
 
     while(cant_jugadores--){
         string nombre;
-        int puntaje;
-
         cin>>nombre;
 
         map_jugadores[nombre] = 0;
@@ -34,7 +32,10 @@ int main(){
     }
    
    
-   if(Noganadores) cout<<"No winner!"<<endl;
+   if(Noganadores){
+    cout<<"No winner!"<<endl;
+   }
+   
     return 0;
 
 }

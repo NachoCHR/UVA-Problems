@@ -9,7 +9,7 @@ int buscarjugador(string nombre, vector<pair<string,int>> jugadores){
       pos = i;
       break;
     }
-  }
+ }
   return pos;
 }
 
