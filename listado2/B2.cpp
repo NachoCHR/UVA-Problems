@@ -10,7 +10,7 @@ int main(){
     cin>>lines;
     cin.ignore();
 
-    unordered_map<string, int> map_jugadores;
+    map<string, int> map_jugadores;
 
     while(cant_jugadores--){
         string nombre;
@@ -24,10 +24,12 @@ int main(){
         int puntaje;
         cin>>nombre;
         cin>>puntaje;
+        if(map_jugadores[nombre] == -1) continue;
         map_jugadores[nombre] += puntaje;
         if(map_jugadores[nombre] >= score_min){
             cout<<nombre+" wins!"<<endl;
             Noganadores = false;
+            map_jugadores[nombre] = -1;
         }
     }
    
