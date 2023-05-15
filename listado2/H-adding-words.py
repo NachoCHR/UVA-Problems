@@ -1,3 +1,6 @@
+# autor: tadhikari
+# fuente: https://github.com/tadhikari/Kattis-Programming-Problem-Solutions/blob/master/Adding%20Words/addingwords.py
+
 from sys import stdin # importa stdin para los datos de entrada.
 
 data = {} # define un diccionario vacio.
