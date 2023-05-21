@@ -6,12 +6,13 @@ int main(){
     int cant_casos;
     cin>>cant_casos;
     cin.ignore();
-    while(--cant_casos){
+    for(int a=0;a<cant_casos;a++){
+        cout<<"e"<<endl;
         int tam;
         cin>>tam;
         cin.ignore();
         vector<int> arreglo;
-        while(--tam){
+        for(int b=0; b<tam;b++){
             int num;
             cin>>num;
             cin.ignore();
@@ -20,7 +21,7 @@ int main(){
         // Aqui viene lo chido.
 
         for(int i=0;i<arreglo.size();++i){
-            cout<<arreglo[i];
+            cout<<arreglo[i]<< " ";
         }
         cout<<endl;
 
