@@ -1,3 +1,6 @@
+// Aceptado
+// Autoria: propio.
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -6,25 +9,38 @@ int main(){
     int cant_casos;
     cin>>cant_casos;
     cin.ignore();
+    
     for(int a=0;a<cant_casos;a++){
-        cout<<"e"<<endl;
+        //cout<<"e"<<endl;
         int tam;
         cin>>tam;
         cin.ignore();
-        vector<int> arreglo;
+        vector<long long> arreglo;
         for(int b=0; b<tam;b++){
-            int num;
+            long long num;
             cin>>num;
-            cin.ignore();
             arreglo.push_back(num);
         }
         // Aqui viene lo chido.
-
-        for(int i=0;i<arreglo.size();++i){
-            cout<<arreglo[i]<< " ";
-        }
+        // Ordenar de menor a mayor.
+        sort(arreglo.begin(), arreglo.end());
+        
+        // Ahora sabemos que los numeros mas grandes se encuentran al principio o al final, por lo que:
+        long long dos_primeros = arreglo[0] * arreglo[1];
+        long long dos_ultimos = arreglo[tam-1] * arreglo[tam-2];
         cout<<endl;
+        // Comparamos cual de los dos es mayor.
+        if(dos_primeros > dos_ultimos)
+            cout<<dos_primeros;
+        else 
+            cout<<dos_ultimos;
 
+        /*
+        for(auto& element: arreglo){
+            cout<<element<< " ";
+        }
+        cout<<endl; 
+        */
     }
     return 0;
 }
